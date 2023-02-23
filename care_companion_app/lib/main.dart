@@ -82,19 +82,19 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
                           //color: Colors.blueGrey,
-                          width: MediaQuery.of(context).size.width * 0.35,
+                          width: MediaQuery.of(context).size.width * 0.38,
                           child: Image.asset(
                             'assets/images/el-logo-white-r@2x.png',
                           )),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 10, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 5, 0),
                       child: Container(
                         //color: Colors.blueGrey,
                         child: const Icon(
                           Icons.settings_outlined,
                           color: Colors.white,
-                          size: 50,
+                          size: 45,
                         ),
                       ),
                     ),
@@ -110,9 +110,12 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
                       child: Text('Hello, [Name]!',
                           style: TextStyle(
-                            fontFamily: 'Montserrat',
+                            //fontFamily: 'Open Sans',
                             color: Colors.white,
                             fontSize: 28,
+                            wordSpacing: 2,
+                            letterSpacing: 1.2,
+                            fontWeight: FontWeight.bold,
                           )
                           //style: FlutterFlowTheme.of(context).title1,
                           ),
@@ -132,9 +135,47 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                           child: Text(
                             'Welcome to the Embodied Labs chatbot library. Choose who you would like to speak with below:',
                             style: TextStyle(
-                              fontFamily: 'Montserrat',
+                              wordSpacing: 2,
+                              //letterSpacing: 0.5,
+                              //fontFamily: 'Open Sans',
                               color: Colors.white,
                               fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25, 20, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        child: Card(
+                          color: Colors.white,
+                          clipBehavior: Clip.hardEdge,
+                          child: InkWell(
+                            splashColor: Colors.blueGrey.withAlpha(30),
+                            onTap: () {
+                              debugPrint('Card tapped.');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: const [
+                                ListTile(
+                                  leading: CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                        'assets/images/alfredHeadshot.png'),
+                                  ),
+                                  title: Text('Alfred Chatbot'),
+                                  subtitle: Text('Sensorial Impairments'),
+                                ),
+                              ],
                             ),
                           ),
                         ),
