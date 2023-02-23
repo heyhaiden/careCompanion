@@ -82,19 +82,22 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
                           //color: Colors.blueGrey,
-                          width: MediaQuery.of(context).size.width * 0.38,
+                          width: MediaQuery.of(context).size.width * 0.3,
                           child: Image.asset(
                             'assets/images/el-logo-white-r@2x.png',
                           )),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 5, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                       child: Container(
                         //color: Colors.blueGrey,
-                        child: const Icon(
-                          Icons.settings_outlined,
+                        child: IconButton(
+                          icon: const Icon(Icons.settings_outlined),
                           color: Colors.white,
-                          size: 45,
+                          iconSize: 45,
+                          onPressed: () {
+                            debugPrint('IconButton tapped.');
+                          },
                         ),
                       ),
                     ),
@@ -149,7 +152,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 20, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 25, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -157,12 +160,56 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                         child: Card(
+                          elevation: 3,
                           color: Colors.white,
                           clipBehavior: Clip.hardEdge,
                           child: InkWell(
                             splashColor: Colors.blueGrey.withAlpha(30),
                             onTap: () {
-                              debugPrint('Card tapped.');
+                              debugPrint('Alfred card tapped.');
+                            },
+                            child: Column(
+                              //mainAxisSize: MainAxisSize.min,
+                              children: const [
+                                ListTile(
+                                  leading: CircleAvatar(
+                                    maxRadius: 40,
+                                    foregroundImage: AssetImage(
+                                        'assets/images/alfredHeadshot.png'),
+                                  ),
+                                  title: Text(
+                                    'Alfred',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  subtitle: Text('Sensorial Impairments'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25, 15, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        child: Card(
+                          elevation: 3,
+                          color: Colors.white,
+                          clipBehavior: Clip.hardEdge,
+                          child: InkWell(
+                            splashColor: Colors.blueGrey.withAlpha(30),
+                            onTap: () {
+                              debugPrint('Beatriz card tapped.');
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -170,10 +217,102 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                 ListTile(
                                   leading: CircleAvatar(
                                     backgroundImage: AssetImage(
-                                        'assets/images/alfredHeadshot.png'),
+                                        'assets/images/beatrizHeadshot.png'),
+                                    maxRadius: 40,
                                   ),
-                                  title: Text('Alfred Chatbot'),
-                                  subtitle: Text('Sensorial Impairments'),
+                                  title: Text(
+                                    'Beatriz',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  subtitle: Text('Memory Care'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25, 15, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        child: Card(
+                          elevation: 3,
+                          color: Colors.white,
+                          clipBehavior: Clip.hardEdge,
+                          child: InkWell(
+                            splashColor: Colors.blueGrey.withAlpha(30),
+                            onTap: () {
+                              debugPrint('Clay card tapped.');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: const [
+                                ListTile(
+                                  leading: CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                        'assets/images/clayHeadshot.png'),
+                                    maxRadius: 40,
+                                  ),
+                                  title: Text(
+                                    'Clay',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  subtitle: Text('Home Care'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25, 15, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        child: Card(
+                          elevation: 3,
+                          color: Colors.white,
+                          clipBehavior: Clip.hardEdge,
+                          child: InkWell(
+                            splashColor: Colors.blueGrey.withAlpha(30),
+                            onTap: () {
+                              debugPrint('Dima card tapped.');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: const [
+                                ListTile(
+                                  leading: CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                        'assets/images/dimaHeadshot.png'),
+                                    maxRadius: 40,
+                                  ),
+                                  title: Text(
+                                    'Dima',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  subtitle: Text('Assisted Care'),
                                 ),
                               ],
                             ),
