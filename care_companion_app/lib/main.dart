@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:dialog_flowtter/dialog_flowtter.dart';
+//import 'package:kommunicate_flutter/kommunicate_flutter.dart';
+//import 'package:flutter_dialogflow/flutter_dialogflow.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,46 +27,46 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidget extends State<MyStatefulWidget> {
-  int _selectedIndex = 0;
+  // int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    // Index 0: Home
-    Text(
-      'Index 0: Home',
-      //style: optionStyle,
-    ),
-    // Index 1: Alfred
-    Text(
-      'Index 1: Alfred Chatbot',
-      //style: optionStyle,
-    ),
-    // Index 2: Beatriz
-    Text(
-      'Index 2: Beatriz Chatbot',
-      //style: optionStyle,
-    ),
-    // Index 3: Clay
-    Text(
-      'Index 3: Clay Chatbot',
-      //style: optionStyle,
-    ),
-    // Index 4: Dima
-    Text(
-      'Index 4: Dima Chatbot',
-      //style: optionStyle,
-    ),
-  ];
+  // static const List<Widget> _widgetOptions = <Widget>[
+  //   // Index 0: Home
+  //   Text(
+  //     'Index 0: Home',
+  //     //style: optionStyle,
+  //   ),
+  //   // Index 1: Alfred
+  //   Text(
+  //     'Index 1: Alfred Chatbot',
+  //     //style: optionStyle,
+  //   ),
+  //   // Index 2: Beatriz
+  //   Text(
+  //     'Index 2: Beatriz Chatbot',
+  //     //style: optionStyle,
+  //   ),
+  //   // Index 3: Clay
+  //   Text(
+  //     'Index 3: Clay Chatbot',
+  //     //style: optionStyle,
+  //   ),
+  //   // Index 4: Dima
+  //   Text(
+  //     'Index 4: Dima Chatbot',
+  //     //style: optionStyle,
+  //   ),
+  // ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  // void _onItemTapped(int index) {
+  //   setState(() {
+  //     _selectedIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[300],
+      backgroundColor: Colors.blueGrey,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -79,10 +80,9 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(3, 3, 0, 0),
                       child: Container(
-                          //color: Colors.blueGrey,
-                          width: MediaQuery.of(context).size.width * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.28,
                           child: Image.asset(
                             'assets/images/el-logo-white-r@2x.png',
                           )),
@@ -90,13 +90,12 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                       child: Container(
-                        //color: Colors.blueGrey,
                         child: IconButton(
                           icon: const Icon(Icons.settings_outlined),
                           color: Colors.white,
-                          iconSize: 45,
+                          iconSize: 40,
                           onPressed: () {
-                            debugPrint('IconButton tapped.');
+                            debugPrint('Settings tapped.');
                           },
                         ),
                       ),
@@ -111,17 +110,16 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
-                      child: Text('Hello, [Name]!',
-                          style: TextStyle(
-                            //fontFamily: 'Open Sans',
-                            color: Colors.white,
-                            fontSize: 28,
-                            wordSpacing: 2,
-                            letterSpacing: 1.2,
-                            fontWeight: FontWeight.bold,
-                          )
-                          //style: FlutterFlowTheme.of(context).title1,
-                          ),
+                      child: Text(
+                        'Hello, [Name]!',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          wordSpacing: 2,
+                          letterSpacing: 1.2,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -139,8 +137,6 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                             'Welcome to the Embodied Labs chatbot library. Choose who you would like to speak with below:',
                             style: TextStyle(
                               wordSpacing: 2,
-                              //letterSpacing: 0.5,
-                              //fontFamily: 'Open Sans',
                               color: Colors.white,
                               fontSize: 16,
                             ),
@@ -152,7 +148,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 25, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 30, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -173,7 +169,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                               children: const [
                                 ListTile(
                                   leading: CircleAvatar(
-                                    maxRadius: 40,
+                                    maxRadius: 35,
                                     foregroundImage: AssetImage(
                                         'assets/images/alfredHeadshot.png'),
                                   ),
@@ -195,7 +191,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 15, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -218,7 +214,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                   leading: CircleAvatar(
                                     backgroundImage: AssetImage(
                                         'assets/images/beatrizHeadshot.png'),
-                                    maxRadius: 40,
+                                    maxRadius: 35,
                                   ),
                                   title: Text(
                                     'Beatriz',
@@ -238,7 +234,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 15, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -261,7 +257,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                   leading: CircleAvatar(
                                     backgroundImage: AssetImage(
                                         'assets/images/clayHeadshot.png'),
-                                    maxRadius: 40,
+                                    maxRadius: 35,
                                   ),
                                   title: Text(
                                     'Clay',
@@ -269,7 +265,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  subtitle: Text('Home Care'),
+                                  subtitle: Text('Hospice'),
                                 ),
                               ],
                             ),
@@ -281,7 +277,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 15, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -304,7 +300,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                   leading: CircleAvatar(
                                     backgroundImage: AssetImage(
                                         'assets/images/dimaHeadshot.png'),
-                                    maxRadius: 40,
+                                    maxRadius: 35,
                                   ),
                                   title: Text(
                                     'Dima',
