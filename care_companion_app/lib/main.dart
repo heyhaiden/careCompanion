@@ -1,3 +1,4 @@
+import 'package:care_companion_app/chatbot_widgets/alfred_chatbot.dart';
 import 'package:flutter/material.dart';
 //import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 //import 'package:flutter_dialogflow/flutter_dialogflow.dart';
@@ -11,10 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      home: MyStatefulWidget(),
+      home: MyStatefulWidget(), // add onboarding slides here
     );
   }
 }
@@ -27,42 +28,6 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidget extends State<MyStatefulWidget> {
-  // int _selectedIndex = 0;
-
-  // static const List<Widget> _widgetOptions = <Widget>[
-  //   // Index 0: Home
-  //   Text(
-  //     'Index 0: Home',
-  //     //style: optionStyle,
-  //   ),
-  //   // Index 1: Alfred
-  //   Text(
-  //     'Index 1: Alfred Chatbot',
-  //     //style: optionStyle,
-  //   ),
-  //   // Index 2: Beatriz
-  //   Text(
-  //     'Index 2: Beatriz Chatbot',
-  //     //style: optionStyle,
-  //   ),
-  //   // Index 3: Clay
-  //   Text(
-  //     'Index 3: Clay Chatbot',
-  //     //style: optionStyle,
-  //   ),
-  //   // Index 4: Dima
-  //   Text(
-  //     'Index 4: Dima Chatbot',
-  //     //style: optionStyle,
-  //   ),
-  // ];
-
-  // void _onItemTapped(int index) {
-  //   setState(() {
-  //     _selectedIndex = index;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,6 +127,11 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                           child: InkWell(
                             splashColor: Colors.blueGrey.withAlpha(30),
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const AlfredChat()),
+                              );
                               debugPrint('Alfred card tapped.');
                             },
                             child: Column(
@@ -180,6 +150,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   subtitle: Text('Sensorial Impairments'),
+                                  trailing: Icon(Icons.arrow_forward_ios),
                                 ),
                               ],
                             ),
@@ -223,6 +194,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   subtitle: Text('Memory Care'),
+                                  trailing: Icon(Icons.arrow_forward_ios),
                                 ),
                               ],
                             ),
@@ -266,6 +238,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   subtitle: Text('Hospice'),
+                                  trailing: Icon(Icons.arrow_forward_ios),
                                 ),
                               ],
                             ),
@@ -277,7 +250,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 30),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -309,6 +282,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   subtitle: Text('Assisted Care'),
+                                  trailing: Icon(Icons.arrow_forward_ios),
                                 ),
                               ],
                             ),
