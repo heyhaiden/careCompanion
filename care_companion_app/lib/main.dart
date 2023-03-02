@@ -1,4 +1,7 @@
 import 'package:care_companion_app/chatbot_widgets/alfred_chatbot.dart';
+import 'package:care_companion_app/chatbot_widgets/beatriz_chatbot.dart';
+import 'package:care_companion_app/chatbot_widgets/clay_chatbot.dart';
+import 'package:care_companion_app/chatbot_widgets/dima_chatbot.dart';
 import 'package:flutter/material.dart';
 //import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 //import 'package:flutter_dialogflow/flutter_dialogflow.dart';
@@ -176,6 +179,11 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                           child: InkWell(
                             splashColor: Colors.blueGrey.withAlpha(30),
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const BeatrizChat()),
+                              );
                               debugPrint('Beatriz card tapped.');
                             },
                             child: Column(
@@ -220,6 +228,11 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                           child: InkWell(
                             splashColor: Colors.blueGrey.withAlpha(30),
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ClayChat()),
+                              );
                               debugPrint('Clay card tapped.');
                             },
                             child: Column(
@@ -264,6 +277,11 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                           child: InkWell(
                             splashColor: Colors.blueGrey.withAlpha(30),
                             onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const DimaChat()),
+                              );
                               debugPrint('Dima card tapped.');
                             },
                             child: Column(
