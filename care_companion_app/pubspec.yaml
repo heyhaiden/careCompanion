@@ -69,7 +69,7 @@ flutter:
     - assets/images/beatrizHeadshot.png
     - assets/images/clayHeadshot.png
     - assets/images/dimaHeadshot.png
-    - assets/credentials.json
+ 
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
