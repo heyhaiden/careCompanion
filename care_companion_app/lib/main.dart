@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 import 'package:care_companion_app/chatbot_screens/beatriz_chatbot.dart';
 import 'package:care_companion_app/chatbot_screens/clay_chatbot.dart';
@@ -56,7 +55,7 @@ class _HomePage extends State<HomePage> {
                           )),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
                         child: IconButton(
                           icon: const Icon(Icons.settings_outlined),
@@ -95,17 +94,17 @@ class _HomePage extends State<HomePage> {
                                               color: Colors.blueAccent),
                                         ),
                                       ),
-                                      ListTile(
-                                        title: Text('Privacy:'),
-                                        trailing: ElevatedButton(
-                                          onPressed: () {
-                                            null;
-                                          },
-                                          child: Text('Delete Account'),
-                                          style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.red),
-                                        ),
-                                      ),
+                                      // ListTile(
+                                      //   title: Text('Privacy:'),
+                                      //   trailing: ElevatedButton(
+                                      //     onPressed: () {
+                                      //       null;
+                                      //     },
+                                      //     child: Text('Delete Account'),
+                                      //     style: ElevatedButton.styleFrom(
+                                      //         backgroundColor: Colors.red),
+                                      //   ),
+                                      // ),
                                     ],
                                   );
                                 });
