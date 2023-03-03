@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kommunicate_flutter/kommunicate_flutter.dart';
+import 'dart:convert';
 
 class DimaChat extends StatefulWidget {
   const DimaChat({super.key});
@@ -15,29 +17,52 @@ class _DimaChatState extends State<DimaChat> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.max,
+            //mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8, 30, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: Row(
-                  mainAxisSize: MainAxisSize.max,
+                  //mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: <Widget>[
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 3, 0, 0),
                       child: Container(
-                          width: MediaQuery.of(context).size.width * 0.28,
+                          //width: MediaQuery.of(context).size.width * 0.28,
                           child: IconButton(
                               icon: Icon(Icons.arrow_back),
                               color: Colors.white,
-                              iconSize: 37,
+                              iconSize: 40,
                               onPressed: () {
                                 Navigator.of(context).pop();
                               })),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            child: Container(
+                              child: CircleAvatar(
+                                radius: 75,
+                                backgroundColor: Colors.lightGreen,
+                                child: CircleAvatar(
+                                  foregroundImage: AssetImage(
+                                      'assets/images/dimaHeadshot.png'),
+                                  radius: 70,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                       child: Container(
                         child: IconButton(
                           icon: const Icon(Icons.settings_outlined),
@@ -76,17 +101,17 @@ class _DimaChatState extends State<DimaChat> {
                                               color: Colors.blueAccent),
                                         ),
                                       ),
-                                      ListTile(
-                                        title: Text('Privacy:'),
-                                        trailing: ElevatedButton(
-                                          onPressed: () {
-                                            null;
-                                          },
-                                          child: Text('Delete Account'),
-                                          style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.red),
-                                        ),
-                                      ),
+                                      // ListTile(
+                                      //   title: Text('Privacy:'),
+                                      //   trailing: ElevatedButton(
+                                      //     onPressed: () {
+                                      //       null;
+                                      //     },
+                                      //     child: Text('Delete Account'),
+                                      //     style: ElevatedButton.styleFrom(
+                                      //         backgroundColor: Colors.red),
+                                      //   ),
+                                      // ),
                                     ],
                                   );
                                 });
@@ -99,36 +124,13 @@ class _DimaChatState extends State<DimaChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      child: Container(
-                        child: CircleAvatar(
-                          radius: 75,
-                          backgroundColor: Colors.blue,
-                          child: CircleAvatar(
-                            foregroundImage:
-                                AssetImage('assets/images/dimaHeadshot.png'),
-                            radius: 70,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                       child: Text('Dima',
                           style: TextStyle(
                             color: Colors.white,
@@ -142,18 +144,81 @@ class _DimaChatState extends State<DimaChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                      child: Card(
-                        child: Text('Hello.'),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          elevation: 0,
+                        ),
+                        child: Text('Assisted Living'),
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          elevation: 0,
+                        ),
+                        child: Text('Transitional Care'),
+                      ),
+                    ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      child: Container(
+                        height: 250,
+                        width: 340,
+                        //width: MediaQuery.of(context).size.width * 0.8,
+                        child: Card(
+                          color: Colors.white,
+                          elevation: 0,
+                          child: Placeholder(),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                child: FloatingActionButton.extended(
+                  onPressed: () async {
+                    try {
+                      dynamic conversationObject = {
+                        'appId': '10b908ed84a81f3eceb849464c54f0861',
+                        'isSingleConversation': false,
+                      };
+                      dynamic result =
+                          await KommunicateFlutterPlugin.buildConversation(
+                              conversationObject);
+                      print(
+                          'Conversation builder success :' + result.toString());
+                    } on Exception catch (e) {
+                      print('Conversation builder error occurred :' +
+                          e.toString());
+                    }
+                  },
+                  tooltip: 'Increment',
+                  label: Text('New conversation'),
+                  icon: const Icon(Icons.add),
+                  backgroundColor: Colors.lightGreen,
                 ),
               ),
             ],
