@@ -153,6 +153,21 @@ class _AlfredChatState extends State<AlfredChat> {
                   ],
                 ),
               ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      child: Card(
+                        child: Text('Hello.'),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),

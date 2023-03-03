@@ -98,6 +98,64 @@ class _ClayChatState extends State<ClayChat> {
                   ],
                 ),
               ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 75,
+                          backgroundColor: Colors.blue,
+                          child: CircleAvatar(
+                            foregroundImage:
+                                AssetImage('assets/images/clayHeadshot.png'),
+                            radius: 70,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      child: Text('Clay',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 28,
+                            wordSpacing: 2,
+                            letterSpacing: 1.2,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      child: Card(
+                        child: Text('Hello.'),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
