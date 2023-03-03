@@ -18,19 +18,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      home: MyStatefulWidget(), // add onboarding slides here
+      home: HomePage(), // add onboarding slides here
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidget();
+  State<HomePage> createState() => _HomePage();
 }
 
-class _MyStatefulWidget extends State<MyStatefulWidget> {
+class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,12 +118,12 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(30, 40, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Text(
                         'Hello, [Name]!',
                         style: TextStyle(

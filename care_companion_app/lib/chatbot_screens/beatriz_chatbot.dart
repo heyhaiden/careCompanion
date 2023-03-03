@@ -144,58 +144,80 @@ class _BeatrizChatState extends State<BeatrizChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          elevation: 0,
+                        ),
+                        child: Text('Alzheimer\'s'),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                          elevation: 0,
+                        ),
+                        child: Text('Dementia'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                        height: 400,
-                        width: 400,
+                        height: 250,
+                        width: 340,
                         //width: MediaQuery.of(context).size.width * 0.8,
                         child: Card(
                           color: Colors.white,
-                          elevation: 5,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            //mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                                child: FloatingActionButton.extended(
-                                  onPressed: () async {
-                                    try {
-                                      dynamic conversationObject = {
-                                        'appId':
-                                            '10b908ed84a81f3eceb849464c54f0861',
-                                        'isSingleConversation': false,
-                                      };
-                                      dynamic result =
-                                          await KommunicateFlutterPlugin
-                                              .buildConversation(
-                                                  conversationObject);
-                                      print('Conversation builder success :' +
-                                          result.toString());
-                                    } on Exception catch (e) {
-                                      print(
-                                          'Conversation builder error occurred :' +
-                                              e.toString());
-                                    }
-                                  },
-                                  tooltip: 'Increment',
-                                  label: Text('New conversation'),
-                                  icon: const Icon(Icons.add),
-                                ),
-                              ),
-                            ],
-                          ),
+                          elevation: 0,
+                          child: Placeholder(),
                         ),
                       ),
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                child: FloatingActionButton.extended(
+                  onPressed: () async {
+                    try {
+                      dynamic conversationObject = {
+                        'appId': '10b908ed84a81f3eceb849464c54f0861',
+                        'isSingleConversation': false,
+                      };
+                      dynamic result =
+                          await KommunicateFlutterPlugin.buildConversation(
+                              conversationObject);
+                      print(
+                          'Conversation builder success :' + result.toString());
+                    } on Exception catch (e) {
+                      print('Conversation builder error occurred :' +
+                          e.toString());
+                    }
+                  },
+                  tooltip: 'Increment',
+                  label: Text('New conversation'),
+                  icon: const Icon(Icons.add),
                 ),
               ),
             ],
