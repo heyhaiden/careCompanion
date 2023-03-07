@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 import 'dart:convert';
 
-class BeatrizChat extends StatefulWidget {
-  const BeatrizChat({super.key});
+class AlfredChat extends StatefulWidget {
+  const AlfredChat({super.key});
 
   @override
-  State<BeatrizChat> createState() => _BeatrizChatState();
+  State<AlfredChat> createState() => _AlfredChatState();
 }
 
-class _BeatrizChatState extends State<BeatrizChat> {
+class _AlfredChatState extends State<AlfredChat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,10 +49,11 @@ class _BeatrizChatState extends State<BeatrizChat> {
                             child: Container(
                               child: CircleAvatar(
                                 radius: 75,
-                                backgroundColor: Colors.blue,
+                                backgroundColor:
+                                    Color.fromARGB(255, 211, 90, 53),
                                 child: CircleAvatar(
                                   foregroundImage: AssetImage(
-                                      'assets/images/beatrizHeadshot.png'),
+                                      'assets/images/alfredHeadshot.png'),
                                   radius: 70,
                                 ),
                               ),
@@ -72,7 +73,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return AlertDialog(
+                                  return const AlertDialog(
                                     title: Text('Settings'), // change title
                                     content: Text(
                                         'Customize your app experience using the settings below:'),
@@ -101,17 +102,17 @@ class _BeatrizChatState extends State<BeatrizChat> {
                                               color: Colors.blueAccent),
                                         ),
                                       ),
-                                      ListTile(
-                                        title: Text('Privacy:'),
-                                        trailing: ElevatedButton(
-                                          onPressed: () {
-                                            null;
-                                          },
-                                          child: Text('Delete Account'),
-                                          style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.red),
-                                        ),
-                                      ),
+                                      // ListTile(
+                                      //   title: Text('Privacy:'),
+                                      //   trailing: ElevatedButton(
+                                      //     onPressed: () {
+                                      //       null;
+                                      //     },
+                                      //     child: Text('Delete Account'),
+                                      //     style: ElevatedButton.styleFrom(
+                                      //         backgroundColor: Colors.red),
+                                      //   ),
+                                      // ),
                                     ],
                                   );
                                 });
@@ -131,7 +132,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                      child: Text('Beatriz',
+                      child: Text('Alfred',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 28,
@@ -157,7 +158,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                           backgroundColor: Colors.grey,
                           elevation: 0,
                         ),
-                        child: Text('Alzheimer\'s'),
+                        child: Text('Macular Degeneration'),
                       ),
                     ),
                     Padding(
@@ -168,7 +169,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                           backgroundColor: Colors.grey,
                           elevation: 0,
                         ),
-                        child: Text('Dementia'),
+                        child: Text('Hearing Loss'),
                       ),
                     ),
                   ],
@@ -218,6 +219,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                   tooltip: 'Increment',
                   label: Text('New conversation'),
                   icon: const Icon(Icons.add),
+                  backgroundColor: Color.fromARGB(255, 211, 90, 53),
                 ),
               ),
             ],

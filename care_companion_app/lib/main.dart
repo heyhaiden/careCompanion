@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:care_companion_app/chatbot_screens/beatriz_chatbot.dart';
-import 'package:care_companion_app/chatbot_screens/clay_chatbot.dart';
-import 'package:care_companion_app/chatbot_screens/dima_chatbot.dart';
-import 'package:care_companion_app/chatbot_screens/alfred_chatbot.dart';
+import 'package:care_companion_app/screens/beatriz_chatbot.dart';
+import 'package:care_companion_app/screens/clay_chatbot.dart';
+import 'package:care_companion_app/screens/dima_chatbot.dart';
+import 'package:care_companion_app/screens/alfred_chatbot.dart';
 
 void main() => runApp(MyApp());
 

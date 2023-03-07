@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 import 'dart:convert';
 
-class AlfredChat extends StatefulWidget {
-  const AlfredChat({super.key});
+class BeatrizChat extends StatefulWidget {
+  const BeatrizChat({super.key});
 
   @override
-  State<AlfredChat> createState() => _AlfredChatState();
+  State<BeatrizChat> createState() => _BeatrizChatState();
 }
 
-class _AlfredChatState extends State<AlfredChat> {
+class _BeatrizChatState extends State<BeatrizChat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,11 +49,10 @@ class _AlfredChatState extends State<AlfredChat> {
                             child: Container(
                               child: CircleAvatar(
                                 radius: 75,
-                                backgroundColor:
-                                    Color.fromARGB(255, 211, 90, 53),
+                                backgroundColor: Colors.blue,
                                 child: CircleAvatar(
                                   foregroundImage: AssetImage(
-                                      'assets/images/alfredHeadshot.png'),
+                                      'assets/images/beatrizHeadshot.png'),
                                   radius: 70,
                                 ),
                               ),
@@ -132,7 +131,7 @@ class _AlfredChatState extends State<AlfredChat> {
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                      child: Text('Alfred',
+                      child: Text('Beatriz',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 28,
@@ -158,7 +157,7 @@ class _AlfredChatState extends State<AlfredChat> {
                           backgroundColor: Colors.grey,
                           elevation: 0,
                         ),
-                        child: Text('Macular Degeneration'),
+                        child: Text('Alzheimer\'s'),
                       ),
                     ),
                     Padding(
@@ -169,7 +168,7 @@ class _AlfredChatState extends State<AlfredChat> {
                           backgroundColor: Colors.grey,
                           elevation: 0,
                         ),
-                        child: Text('Hearing Loss'),
+                        child: Text('Dementia'),
                       ),
                     ),
                   ],
@@ -219,7 +218,6 @@ class _AlfredChatState extends State<AlfredChat> {
                   tooltip: 'Increment',
                   label: Text('New conversation'),
                   icon: const Icon(Icons.add),
-                  backgroundColor: Color.fromARGB(255, 211, 90, 53),
                 ),
               ),
             ],
