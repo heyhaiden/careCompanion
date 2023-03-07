@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:care_companion_app/main.dart';
 import 'package:care_companion_app/screens/beatriz_chatbot.dart';
 import 'package:care_companion_app/screens/clay_chatbot.dart';
 import 'package:care_companion_app/screens/dima_chatbot.dart';
 import 'package:care_companion_app/screens/alfred_chatbot.dart';
+
+import 'package:care_companion_app/widgets/settings_dialog.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -49,7 +50,7 @@ class _HomePage extends State<HomePage> {
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return const SettingsDialog();
+                                  return SettingsDialog();
                                 });
                             debugPrint('Settings tapped.');
                           },
