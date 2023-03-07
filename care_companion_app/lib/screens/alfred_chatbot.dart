@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kommunicate_flutter/kommunicate_flutter.dart';
-import 'dart:convert';
+import 'package:care_companion_app/widgets/settings_dialog.dart';
 
 class AlfredChat extends StatefulWidget {
   const AlfredChat({super.key});
@@ -73,48 +72,7 @@ class _AlfredChatState extends State<AlfredChat> {
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return const AlertDialog(
-                                    title: Text('Settings'), // change title
-                                    content: Text(
-                                        'Customize your app experience using the settings below:'),
-                                    actions: <Widget>[
-                                      ListTile(
-                                        title: Text('Language:'),
-                                        trailing: Text(
-                                          'English',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text Size:'),
-                                        trailing: Text(
-                                          'Regular',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text to Speech:'),
-                                        trailing: Text(
-                                          'Off',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      // ListTile(
-                                      //   title: Text('Privacy:'),
-                                      //   trailing: ElevatedButton(
-                                      //     onPressed: () {
-                                      //       null;
-                                      //     },
-                                      //     child: Text('Delete Account'),
-                                      //     style: ElevatedButton.styleFrom(
-                                      //         backgroundColor: Colors.red),
-                                      //   ),
-                                      // ),
-                                    ],
-                                  );
+                                  return const SettingsDialog();
                                 });
                             debugPrint('Settings tapped.');
                           },
@@ -187,10 +145,22 @@ class _AlfredChatState extends State<AlfredChat> {
                         height: 250,
                         width: 340,
                         //width: MediaQuery.of(context).size.width * 0.8,
-                        child: Card(
+                        child: const Card(
                           color: Colors.white,
-                          elevation: 0,
-                          child: Placeholder(),
+                          elevation: 2,
+                          child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                              child: Text(
+                                'Meet Alfred, a 74-year-old African American man with macular degeneration and high-frequency hearing loss as he spends time with family, visits the doctor, and receives a diagnosis. \n\nAs Alfred goes about his daily life, the learner will understand how deficits in hearing and vision affect communication and impact emotional wellbeing.',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  letterSpacing: .3,
+                                  wordSpacing: 1.5,
+                                ),
+                                textAlign: TextAlign.left,
+                              )),
                         ),
                       ),
                     ),
@@ -200,27 +170,12 @@ class _AlfredChatState extends State<AlfredChat> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: FloatingActionButton.extended(
-                  onPressed: () async {
-                    try {
-                      dynamic conversationObject = {
-                        'appId': '10b908ed84a81f3eceb849464c54f0861',
-                        'isSingleConversation': false,
-                      };
-                      dynamic result =
-                          await KommunicateFlutterPlugin.buildConversation(
-                              conversationObject);
-                      print(
-                          'Conversation builder success :' + result.toString());
-                    } on Exception catch (e) {
-                      print('Conversation builder error occurred :' +
-                          e.toString());
-                    }
-                  },
-                  tooltip: 'Increment',
-                  label: Text('New conversation'),
-                  icon: const Icon(Icons.add),
-                  backgroundColor: Color.fromARGB(255, 211, 90, 53),
-                ),
+                    onPressed: () {},
+                    tooltip: 'Increment',
+                    elevation: 0,
+                    label: Text('Coming soon'),
+                    icon: const Icon(Icons.add),
+                    backgroundColor: Colors.grey),
               ),
             ],
           ),
