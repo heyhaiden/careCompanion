@@ -1,7 +1,9 @@
+import 'package:care_companion_app/onboard_slide.dart';
 import 'package:flutter/material.dart';
 import 'package:care_companion_app/screens/home_page.dart';
+import 'package:care_companion_app/screens/onboarding_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      home: HomePage(), // add onboarding slides here
+      home: OnboardingScreen(), // add onboarding slides here?
     );
   }
 }
