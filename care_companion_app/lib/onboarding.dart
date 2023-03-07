@@ -22,7 +22,7 @@ class _OnboardingState extends State<Onboarding> {
             PageView(
               controller: _controller,
               children: const [
-                Page1(
+                OnboardingSlide(
                   "Earn for every Referal ",
                   "images/boba-wealth.png",
                   Colors.amberAccent,
