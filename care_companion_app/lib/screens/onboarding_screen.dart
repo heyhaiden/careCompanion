@@ -10,6 +10,8 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   late PageController _pageController;
 
+  int _pageIndex = 0;
+
   @override
   void initState() {
     _pageController = PageController(initialPage: 0);
@@ -25,41 +27,84 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: PageView.builder(
-                itemCount: slidesList.length,
-                controller: _pageController,
-                itemBuilder: (context, index) {
-                  return OnboardContent(
-                    image: slidesList[index].image,
-                    title: slidesList[index].title,
-                    description: slidesList[index].description,
-                  );
-                },
-              ),
-            ),
-            SizedBox(
-                height: 100,
-                width: 60,
-                child: ElevatedButton(
-                  onPressed: () {
-                    _pageController.nextPage(
-                        curve: Curves.ease,
-                        duration: const Duration(milliseconds: 300));
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SafeArea(
+          child: Column(
+            children: [
+              Expanded(
+                child: PageView.builder(
+                  itemCount: slidesList.length,
+                  controller: _pageController,
+                  onPageChanged: (index) {
+                    setState(() {
+                      _pageIndex = index;
+                    });
                   },
-                  style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
+                  itemBuilder: (context, index) {
+                    return OnboardContent(
+                      image: slidesList[index].image,
+                      title: slidesList[index].title,
+                      description: slidesList[index].description,
+                    );
+                  },
+                ),
+              ),
+              Row(
+                children: [
+                  ...List.generate(
+                    slidesList.length,
+                    (index) => Padding(
+                      padding: EdgeInsets.only(right: 4.0),
+                      child: DotIndicator(isActive: index == _pageIndex),
+                    ),
                   ),
-                  child: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
+                  const Spacer(),
+                  SizedBox(
+                    height: 60,
+                    width: 60,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _pageController.nextPage(
+                            curve: Curves.ease,
+                            duration: const Duration(milliseconds: 300));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: const CircleBorder(),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
-                ))
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+class DotIndicator extends StatelessWidget {
+  const DotIndicator({
+    super.key,
+    this.isActive = false,
+  });
+
+  final bool isActive;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      height: isActive ? 12 : 4,
+      width: 4,
+      decoration: BoxDecoration(
+        color: isActive ? Colors.blue : Colors.grey,
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
       ),
     );
   }
@@ -86,13 +131,13 @@ final List<Onboard> slidesList = [
     image: 'assets/images/alfredHeadshot.png',
     title: 'We’re here to connect',
     description:
-        'Speaking with you and your loved ones to help answer questions you may have around periods of transitional care.',
+        'Speaking with you and your loved ones to help answer questions during periods of transitional care.',
   ),
   Onboard(
     image: 'assets/images/dimaHeadshot.png',
-    title: 'We’re here to connect',
+    title: 'Join our growing family',
     description:
-        'Speaking with you and your loved ones to help answer questions you may have around periods of transitional care.',
+        'We cover an ever-expanding range of topics from healthcare to government services.',
   ),
   Onboard(
     image: 'assets/images/clayHeadshot.png',
