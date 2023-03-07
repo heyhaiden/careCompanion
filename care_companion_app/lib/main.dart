@@ -1,4 +1,3 @@
-import 'package:care_companion_app/onboard_slide.dart';
 import 'package:flutter/material.dart';
 import 'package:care_companion_app/screens/home_page.dart';
 import 'package:care_companion_app/screens/onboarding_screen.dart';
