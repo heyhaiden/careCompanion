@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -68,6 +70,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         _pageController.nextPage(
                             curve: Curves.ease,
                             duration: const Duration(milliseconds: 300));
+                        if (_pageIndex == slidesList.length - 1) {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
+                        }
                       },
                       style: ElevatedButton.styleFrom(
                         shape: const CircleBorder(),
