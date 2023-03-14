@@ -126,25 +126,28 @@ class _HomePage extends State<HomePage> {
                               );
                               debugPrint('Alfred card tapped.');
                             },
-                            child: Column(
-                              //mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                ListTile(
-                                  leading: CircleAvatar(
-                                    maxRadius: 35,
-                                    foregroundImage: AssetImage(
-                                        'assets/images/alfredHeadshot.png'),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                              child: Column(
+                                //mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  ListTile(
+                                    leading: CircleAvatar(
+                                      maxRadius: 35,
+                                      foregroundImage: AssetImage(
+                                          'assets/images/alfredHeadshot.png'),
+                                    ),
+                                    title: Text(
+                                      'Alfred',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text('Sensorial Impairments'),
+                                    trailing: Icon(Icons.arrow_forward_ios),
                                   ),
-                                  title: Text(
-                                    'Alfred',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  subtitle: Text('Sensorial Impairments'),
-                                  trailing: Icon(Icons.arrow_forward_ios),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -175,25 +178,28 @@ class _HomePage extends State<HomePage> {
                               );
                               debugPrint('Beatriz card tapped.');
                             },
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                ListTile(
-                                  leading: CircleAvatar(
-                                    backgroundImage: AssetImage(
-                                        'assets/images/beatrizHeadshot.png'),
-                                    maxRadius: 35,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  ListTile(
+                                    leading: CircleAvatar(
+                                      backgroundImage: AssetImage(
+                                          'assets/images/beatrizHeadshot.png'),
+                                      maxRadius: 35,
+                                    ),
+                                    title: Text(
+                                      'Beatriz',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text('Memory Care'),
+                                    trailing: Icon(Icons.arrow_forward_ios),
                                   ),
-                                  title: Text(
-                                    'Beatriz',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  subtitle: Text('Memory Care'),
-                                  trailing: Icon(Icons.arrow_forward_ios),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -224,25 +230,28 @@ class _HomePage extends State<HomePage> {
                               );
                               debugPrint('Clay card tapped.');
                             },
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                ListTile(
-                                  leading: CircleAvatar(
-                                    backgroundImage: AssetImage(
-                                        'assets/images/clayHeadshot.png'),
-                                    maxRadius: 35,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  ListTile(
+                                    leading: CircleAvatar(
+                                      backgroundImage: AssetImage(
+                                          'assets/images/clayHeadshot.png'),
+                                      maxRadius: 35,
+                                    ),
+                                    title: Text(
+                                      'Clay',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text('Hospice'),
+                                    trailing: Icon(Icons.arrow_forward_ios),
                                   ),
-                                  title: Text(
-                                    'Clay',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  subtitle: Text('Hospice'),
-                                  trailing: Icon(Icons.arrow_forward_ios),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -252,7 +261,7 @@ class _HomePage extends State<HomePage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 30),
+                padding: EdgeInsetsDirectional.fromSTEB(25, 10, 25, 5),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -273,25 +282,28 @@ class _HomePage extends State<HomePage> {
                               );
                               debugPrint('Dima card tapped.');
                             },
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: const [
-                                ListTile(
-                                  leading: CircleAvatar(
-                                    backgroundImage: AssetImage(
-                                        'assets/images/dimaHeadshot.png'),
-                                    maxRadius: 35,
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: const [
+                                  ListTile(
+                                    leading: CircleAvatar(
+                                      backgroundImage: AssetImage(
+                                          'assets/images/dimaHeadshot.png'),
+                                      maxRadius: 35,
+                                    ),
+                                    title: Text(
+                                      'Dima',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    subtitle: Text('Assisted Care'),
+                                    trailing: Icon(Icons.arrow_forward_ios),
                                   ),
-                                  title: Text(
-                                    'Dima',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  subtitle: Text('Assisted Care'),
-                                  trailing: Icon(Icons.arrow_forward_ios),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
