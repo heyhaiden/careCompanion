@@ -1,6 +1,6 @@
+import 'package:care_companion_app/widgets/settings_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
-import 'dart:convert';
 
 class ClayChat extends StatefulWidget {
   const ClayChat({super.key});
@@ -45,7 +45,8 @@ class _ClayChatState extends State<ClayChat> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                             child: Container(
                               child: CircleAvatar(
                                 radius: 75,
@@ -73,48 +74,7 @@ class _ClayChatState extends State<ClayChat> {
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: Text('Settings'), // change title
-                                    content: Text(
-                                        'Customize your app experience using the settings below:'),
-                                    actions: <Widget>[
-                                      ListTile(
-                                        title: Text('Language:'),
-                                        trailing: Text(
-                                          'English',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text Size:'),
-                                        trailing: Text(
-                                          'Regular',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text to Speech:'),
-                                        trailing: Text(
-                                          'Off',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      // ListTile(
-                                      //   title: Text('Privacy:'),
-                                      //   trailing: ElevatedButton(
-                                      //     onPressed: () {
-                                      //       null;
-                                      //     },
-                                      //     child: Text('Delete Account'),
-                                      //     style: ElevatedButton.styleFrom(
-                                      //         backgroundColor: Colors.red),
-                                      //   ),
-                                      // ),
-                                    ],
-                                  );
+                                  return const SettingsDialog();
                                 });
                             debugPrint('Settings tapped.');
                           },
@@ -129,7 +89,7 @@ class _ClayChatState extends State<ClayChat> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                       child: Text('Clay',
@@ -155,7 +115,7 @@ class _ClayChatState extends State<ClayChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Color.fromARGB(255, 202, 66, 116),
                           elevation: 0,
                         ),
                         child: Text('Hospice Care'),
@@ -166,7 +126,7 @@ class _ClayChatState extends State<ClayChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Color.fromARGB(255, 202, 66, 116),
                           elevation: 0,
                         ),
                         child: Text('End of Life'),
@@ -176,7 +136,7 @@ class _ClayChatState extends State<ClayChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -184,13 +144,24 @@ class _ClayChatState extends State<ClayChat> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                        height: 250,
-                        width: 340,
-                        //width: MediaQuery.of(context).size.width * 0.8,
-                        child: Card(
+                        height: 285,
+                        width: 318,
+                        child: const Card(
                           color: Colors.white,
-                          elevation: 0,
-                          child: Placeholder(),
+                          elevation: 2,
+                          child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                              child: Text(
+                                'Meet Clay, a 66-year-old veteran with terminal lung cancer, as he comes to terms with his diagnosis. Clay transitions to hospice care and, as he enters the final stage of life, understands the importance of clear, compassionate communication about end-of-life decisions and about what to expect in the final days. \n\nTalk with Clay about end-of-life symptom presentation, management, and control.',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  letterSpacing: .3,
+                                  wordSpacing: 1.5,
+                                ),
+                                textAlign: TextAlign.left,
+                              )),
                         ),
                       ),
                     ),
@@ -198,28 +169,14 @@ class _ClayChatState extends State<ClayChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: FloatingActionButton.extended(
-                  onPressed: () async {
-                    try {
-                      dynamic conversationObject = {
-                        'appId': '10b908ed84a81f3eceb849464c54f0861',
-                        'isSingleConversation': false,
-                      };
-                      dynamic result =
-                          await KommunicateFlutterPlugin.buildConversation(
-                              conversationObject);
-                      print(
-                          'Conversation builder success :' + result.toString());
-                    } on Exception catch (e) {
-                      print('Conversation builder error occurred :' +
-                          e.toString());
-                    }
-                  },
+                  onPressed: () {},
                   tooltip: 'Increment',
-                  label: Text('New conversation'),
-                  icon: const Icon(Icons.add),
-                  backgroundColor: Color.fromARGB(255, 202, 66, 116),
+                  elevation: 0,
+                  label: const Text('Coming soon'),
+                  icon: const Icon(Icons.calendar_month_outlined),
+                  backgroundColor: Colors.grey,
                 ),
               ),
             ],

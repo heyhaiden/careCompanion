@@ -44,7 +44,8 @@ class _AlfredChatState extends State<AlfredChat> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                             child: Container(
                               child: CircleAvatar(
                                 radius: 75,
@@ -87,7 +88,7 @@ class _AlfredChatState extends State<AlfredChat> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                       child: Text('Alfred',
@@ -113,7 +114,7 @@ class _AlfredChatState extends State<AlfredChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Color.fromARGB(230, 211, 90, 53),
                           elevation: 0,
                         ),
                         child: Text('Macular Degeneration'),
@@ -124,7 +125,7 @@ class _AlfredChatState extends State<AlfredChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Color.fromARGB(230, 211, 90, 53),
                           elevation: 0,
                         ),
                         child: Text('Hearing Loss'),
@@ -134,7 +135,7 @@ class _AlfredChatState extends State<AlfredChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -142,9 +143,8 @@ class _AlfredChatState extends State<AlfredChat> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                        height: 250,
-                        width: 340,
-                        //width: MediaQuery.of(context).size.width * 0.8,
+                        height: 275,
+                        width: 318,
                         child: const Card(
                           color: Colors.white,
                           elevation: 2,
@@ -170,12 +170,13 @@ class _AlfredChatState extends State<AlfredChat> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: FloatingActionButton.extended(
-                    onPressed: () {},
-                    tooltip: 'Increment',
-                    elevation: 0,
-                    label: Text('Coming soon'),
-                    icon: const Icon(Icons.add),
-                    backgroundColor: Colors.grey),
+                  onPressed: () {},
+                  tooltip: 'Increment',
+                  elevation: 0,
+                  label: const Text('Coming soon'),
+                  icon: const Icon(Icons.calendar_month_outlined),
+                  backgroundColor: Colors.grey,
+                ),
               ),
             ],
           ),

@@ -1,6 +1,6 @@
+import 'package:care_companion_app/widgets/settings_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
-import 'dart:convert';
 
 class DimaChat extends StatefulWidget {
   const DimaChat({super.key});
@@ -45,9 +45,10 @@ class _DimaChatState extends State<DimaChat> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 15, 0, 0),
                             child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 75,
                                 backgroundColor: Colors.lightGreen,
                                 child: CircleAvatar(
@@ -72,48 +73,7 @@ class _DimaChatState extends State<DimaChat> {
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: Text('Settings'), // change title
-                                    content: Text(
-                                        'Customize your app experience using the settings below:'),
-                                    actions: <Widget>[
-                                      ListTile(
-                                        title: Text('Language:'),
-                                        trailing: Text(
-                                          'English',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text Size:'),
-                                        trailing: Text(
-                                          'Regular',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text to Speech:'),
-                                        trailing: Text(
-                                          'Off',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      // ListTile(
-                                      //   title: Text('Privacy:'),
-                                      //   trailing: ElevatedButton(
-                                      //     onPressed: () {
-                                      //       null;
-                                      //     },
-                                      //     child: Text('Delete Account'),
-                                      //     style: ElevatedButton.styleFrom(
-                                      //         backgroundColor: Colors.red),
-                                      //   ),
-                                      // ),
-                                    ],
-                                  );
+                                  return const SettingsDialog();
                                 });
                             debugPrint('Settings tapped.');
                           },
@@ -128,7 +88,7 @@ class _DimaChatState extends State<DimaChat> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                       child: Text('Dima',
@@ -154,7 +114,7 @@ class _DimaChatState extends State<DimaChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Colors.lightGreen,
                           elevation: 0,
                         ),
                         child: Text('Assisted Living'),
@@ -165,7 +125,7 @@ class _DimaChatState extends State<DimaChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Colors.lightGreen,
                           elevation: 0,
                         ),
                         child: Text('Transitional Care'),
@@ -175,7 +135,7 @@ class _DimaChatState extends State<DimaChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -183,13 +143,25 @@ class _DimaChatState extends State<DimaChat> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                        height: 250,
-                        width: 340,
+                        height: 270,
+                        width: 318,
                         //width: MediaQuery.of(context).size.width * 0.8,
-                        child: Card(
+                        child: const Card(
                           color: Colors.white,
-                          elevation: 0,
-                          child: Placeholder(),
+                          elevation: 2,
+                          child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                              child: Text(
+                                'Meet Dima, a Lebanese-American immigrant living with symptoms of both Lewy Body Dementia and Parkinson’s Disease as she transitions from life at home to a residential community. \n\nThrough her experience, the learner will be able to identify the differing symptoms of these two conditions and how to manage care as symptoms evolve.',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  letterSpacing: .3,
+                                  wordSpacing: 1.5,
+                                ),
+                                textAlign: TextAlign.left,
+                              )),
                         ),
                       ),
                     ),
@@ -199,26 +171,12 @@ class _DimaChatState extends State<DimaChat> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: FloatingActionButton.extended(
-                  onPressed: () async {
-                    try {
-                      dynamic conversationObject = {
-                        'appId': '10b908ed84a81f3eceb849464c54f0861',
-                        'isSingleConversation': false,
-                      };
-                      dynamic result =
-                          await KommunicateFlutterPlugin.buildConversation(
-                              conversationObject);
-                      print(
-                          'Conversation builder success :' + result.toString());
-                    } on Exception catch (e) {
-                      print('Conversation builder error occurred :' +
-                          e.toString());
-                    }
-                  },
+                  onPressed: () {},
                   tooltip: 'Increment',
-                  label: Text('New conversation'),
-                  icon: const Icon(Icons.add),
-                  backgroundColor: Colors.lightGreen,
+                  elevation: 0,
+                  label: const Text('Coming soon'),
+                  icon: const Icon(Icons.calendar_month_outlined),
+                  backgroundColor: Colors.grey,
                 ),
               ),
             ],

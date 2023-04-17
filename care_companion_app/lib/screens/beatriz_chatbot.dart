@@ -1,6 +1,6 @@
+import 'package:care_companion_app/widgets/settings_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
-import 'dart:convert';
 
 class BeatrizChat extends StatefulWidget {
   const BeatrizChat({super.key});
@@ -45,9 +45,10 @@ class _BeatrizChatState extends State<BeatrizChat> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 15, 0, 0),
                             child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 75,
                                 backgroundColor: Colors.blue,
                                 child: CircleAvatar(
@@ -72,48 +73,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: Text('Settings'), // change title
-                                    content: Text(
-                                        'Customize your app experience using the settings below:'),
-                                    actions: <Widget>[
-                                      ListTile(
-                                        title: Text('Language:'),
-                                        trailing: Text(
-                                          'English',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text Size:'),
-                                        trailing: Text(
-                                          'Regular',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      ListTile(
-                                        title: Text('Text to Speech:'),
-                                        trailing: Text(
-                                          'Off',
-                                          style: TextStyle(
-                                              color: Colors.blueAccent),
-                                        ),
-                                      ),
-                                      // ListTile(
-                                      //   title: Text('Privacy:'),
-                                      //   trailing: ElevatedButton(
-                                      //     onPressed: () {
-                                      //       null;
-                                      //     },
-                                      //     child: Text('Delete Account'),
-                                      //     style: ElevatedButton.styleFrom(
-                                      //         backgroundColor: Colors.red),
-                                      //   ),
-                                      // ),
-                                    ],
-                                  );
+                                  return const SettingsDialog();
                                 });
                             debugPrint('Settings tapped.');
                           },
@@ -128,7 +88,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                       child: Text('Beatriz',
@@ -154,7 +114,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Colors.blue,
                           elevation: 0,
                         ),
                         child: Text('Alzheimer\'s'),
@@ -165,7 +125,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey,
+                          backgroundColor: Colors.blue,
                           elevation: 0,
                         ),
                         child: Text('Dementia'),
@@ -175,7 +135,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -183,13 +143,25 @@ class _BeatrizChatState extends State<BeatrizChat> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                        height: 250,
-                        width: 340,
+                        height: 275,
+                        width: 318,
                         //width: MediaQuery.of(context).size.width * 0.8,
-                        child: Card(
+                        child: const Card(
                           color: Colors.white,
-                          elevation: 0,
-                          child: Placeholder(),
+                          elevation: 2,
+                          child: Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                              child: Text(
+                                'Meet Beatriz, a middle-aged Latina woman as progressive Alzheimer’s Disease causes changes in her brain. \n\nFrom the onset of symptoms to late stage disease and the transition to residential care, the learner understands the profound effect Alzheimer’s has on daily life, from processing and cognition to relationships and emotional wellbeing.',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  letterSpacing: .3,
+                                  wordSpacing: 1.5,
+                                ),
+                                textAlign: TextAlign.left,
+                              )),
                         ),
                       ),
                     ),
