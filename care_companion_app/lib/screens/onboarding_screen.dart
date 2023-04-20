@@ -1,6 +1,6 @@
+import 'package:care_companion_app/screens/home_page.dart';
+import 'package:care_companion_app/src/authentication.dart';
 import 'package:flutter/material.dart';
-
-import 'home_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -48,45 +48,49 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       image: slidesList[index].image,
                       title: slidesList[index].title,
                       description: slidesList[index].description,
+                      buttonText: slidesList[index].buttonText,
                     );
                   },
                 ),
               ),
               Row(
                 children: [
-                  ...List.generate(
-                    slidesList.length,
-                    (index) => Padding(
-                      padding: EdgeInsets.only(right: 4.0),
-                      child: DotIndicator(isActive: index == _pageIndex),
-                    ),
-                  ),
-                  const Spacer(),
-                  SizedBox(
-                    height: 60,
-                    width: 60,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        _pageController.nextPage(
-                            curve: Curves.ease,
-                            duration: const Duration(milliseconds: 300));
-                        if (_pageIndex == slidesList.length - 1) {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => const HomePage(),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 0, 100, 100),
+                      child: SizedBox(
+                        height: 60,
+                        width: 60,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            _pageController.nextPage(
+                                curve: Curves.ease,
+                                duration: const Duration(milliseconds: 450));
+
+                            print('Onboarding Screen $_pageIndex pressed');
+
+                            if (_pageIndex == slidesList.length - 1) {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => const HomePage(),
+                                ),
+                              );
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
                             ),
-                          );
-                        }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_forward,
-                        color: Colors.white,
+                            backgroundColor: Colors.blue,
+                          ),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ],
@@ -97,35 +101,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 }
 
-class DotIndicator extends StatelessWidget {
-  const DotIndicator({
-    super.key,
-    this.isActive = false,
-  });
-
-  final bool isActive;
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 300),
-      height: isActive ? 12 : 4,
-      width: 4,
-      decoration: BoxDecoration(
-        color: isActive ? Colors.blue : Colors.grey,
-        borderRadius: const BorderRadius.all(Radius.circular(12)),
-      ),
-    );
-  }
-}
-
 class Onboard {
-  final String image, title, description;
+  final String image, title, description, buttonText;
 
   Onboard({
     required this.image,
     required this.title,
     required this.description,
+    required this.buttonText,
   });
 }
 
@@ -135,24 +118,27 @@ final List<Onboard> slidesList = [
     title: 'Hola! My name is Beatriz',
     description:
         'I’m part of a family of virtual caregivers at Embodied Labs, where we’re transforming the way you care.',
+    buttonText: 'Next',
   ),
   Onboard(
     image: 'assets/images/alfredHeadshot.png',
     title: 'We’re here to connect',
     description:
         'Speaking with you and your loved ones to help answer questions during periods of transitional care.',
+    buttonText: 'Next',
   ),
   Onboard(
     image: 'assets/images/dimaHeadshot.png',
     title: 'Join our growing family',
     description:
         'We cover an ever-expanding range of topics from healthcare to government services.',
+    buttonText: 'Next',
   ),
   Onboard(
     image: 'assets/images/clayHeadshot.png',
-    title: 'We’re here to connect',
-    description:
-        'Speaking with you and your loved ones to help answer questions you may have around periods of transitional care.',
+    title: 'Let’s get started',
+    description: 'But before we begin, I would love to learn more about you!',
+    buttonText: 'Let’s go!',
   ),
 ];
 
@@ -162,9 +148,10 @@ class OnboardContent extends StatelessWidget {
     required this.image,
     required this.title,
     required this.description,
+    required this.buttonText,
   });
 
-  final String image, title, description;
+  final String image, title, description, buttonText;
 
   @override
   Widget build(BuildContext context) {
@@ -177,22 +164,25 @@ class OnboardContent extends StatelessWidget {
             image,
             width: 180,
           ),
-          const Spacer(),
-          Text(
-            title,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                  fontWeight: FontWeight.w500,
-                ),
-          ),
+          //const Spacer(),\
+          const SizedBox(height: 40),
+          Text(title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 26,
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+              )),
           const SizedBox(
             height: 20,
           ),
           Text(description,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w400,
-                  )),
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+              )),
           const Spacer(),
         ],
       ),
