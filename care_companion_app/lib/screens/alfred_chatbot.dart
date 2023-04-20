@@ -47,7 +47,7 @@ class _AlfredChatState extends State<AlfredChat> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                             child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 75,
                                 backgroundColor:
                                     Color.fromARGB(255, 211, 90, 53),

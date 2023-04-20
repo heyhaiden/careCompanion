@@ -20,7 +20,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
             //mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: Row(
                   //mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -169,7 +169,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: FloatingActionButton.extended(
                   onPressed: () async {
                     try {
@@ -188,7 +188,7 @@ class _BeatrizChatState extends State<BeatrizChat> {
                     }
                   },
                   tooltip: 'Increment',
-                  label: Text('New conversation'),
+                  label: const Text('New conversation'),
                   icon: const Icon(Icons.add),
                 ),
               ),

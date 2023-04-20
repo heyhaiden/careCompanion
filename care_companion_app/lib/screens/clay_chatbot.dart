@@ -1,6 +1,5 @@
 import 'package:care_companion_app/widgets/settings_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 class ClayChat extends StatefulWidget {
   const ClayChat({super.key});
@@ -20,18 +19,19 @@ class _ClayChatState extends State<ClayChat> {
             //mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: Row(
                   //mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 3, 0, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(20, 3, 0, 0),
                       child: Container(
                           //width: MediaQuery.of(context).size.width * 0.28,
                           child: IconButton(
-                              icon: Icon(Icons.arrow_back),
+                              icon: const Icon(Icons.arrow_back),
                               color: Colors.white,
                               iconSize: 40,
                               onPressed: () {
@@ -39,16 +39,17 @@ class _ClayChatState extends State<ClayChat> {
                               })),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 15, 0, 0),
                             child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 75,
                                 backgroundColor:
                                     Color.fromARGB(255, 202, 66, 116),
@@ -64,7 +65,8 @@ class _ClayChatState extends State<ClayChat> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                       child: Container(
                         child: IconButton(
                           icon: const Icon(Icons.settings_outlined),
@@ -85,7 +87,7 @@ class _ClayChatState extends State<ClayChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -105,44 +107,48 @@ class _ClayChatState extends State<ClayChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 202, 66, 116),
+                          backgroundColor:
+                              const Color.fromARGB(255, 202, 66, 116),
                           elevation: 0,
                         ),
-                        child: Text('Hospice Care'),
+                        child: const Text('Hospice Care'),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 202, 66, 116),
+                          backgroundColor:
+                              const Color.fromARGB(255, 202, 66, 116),
                           elevation: 0,
                         ),
-                        child: Text('End of Life'),
+                        child: const Text('End of Life'),
                       ),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
                         height: 285,
                         width: 318,
@@ -169,7 +175,7 @@ class _ClayChatState extends State<ClayChat> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: FloatingActionButton.extended(
                   onPressed: () {},
                   tooltip: 'Increment',

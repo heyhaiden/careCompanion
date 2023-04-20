@@ -64,7 +64,7 @@ class _HomePage extends State<HomePage> {
                 padding: EdgeInsetsDirectional.fromSTEB(30, 40, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  children: [
+                  children: const [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Text(
@@ -82,15 +82,16 @@ class _HomePage extends State<HomePage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(30, 0, 25, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                         child: Container(
-                          child: Text(
+                          child: const Text(
                             'Welcome to the Embodied Labs chatbot library. Choose who you would like to speak with below:',
                             style: TextStyle(
                               wordSpacing: 2,
