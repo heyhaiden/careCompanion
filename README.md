@@ -1,11 +1,13 @@
 # CareCompanion: Chatbot Library for Family Caregivers
-😄 Friendly chatbots covering topics including sensorial disorders, memory care, and navigating hospice/end of life
-📱 No account required, use the app as a guest after providing your name
-🌱 New topics and chatbots covering other conditions will be rolled out in the future
+😄  Friendly chatbots covering topics including sensorial disorders, memory care, and navigating hospice/end of life  
+
+📱   No account required, use the app as a guest after providing your name  
+
+🌱  New topics and chatbots covering other conditions will be rolled out in the future
 
 ## The App
 
-Use this section to show us what your Mobile App is about.   Include a Screenshot to the App, link to the various frameworks you've used. Include your presentation video here that shows off your Mobile App.   Emojis are also fun to include 
+![App](/assets/)
 
 Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
 
