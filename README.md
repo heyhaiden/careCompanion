@@ -1,20 +1,15 @@
-# REPLACE WITH YOUR APP NAME
+# CareCompanion: Chatbot Library for Family Caregivers
+😄 Friendly chatbots covering topics including sensorial disorders, memory care, and navigating hospice/end of life
+📱 No account required, use the app as a guest after providing your name
+🌱 New topics and chatbots covering other conditions will be rolled out in the future
 
-This is the Final assessment template for CASA0014 - Please use this template and edit the relevant sections to personalise.
-This section has a short introduction to what the application is
+## The App
 
-## Use this README File 
+Use this section to show us what your Mobile App is about.   Include a Screenshot to the App, link to the various frameworks you've used. Include your presentation video here that shows off your Mobile App.   Emojis are also fun to include 
 
-Use this section to show us what your Mobile App is about.   Include a Screenshot to the App, link to the various frameworks you've used. Include your presentation video here that shows off your Mobile App.   Emojis are also fun to include 📱 😄
+Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
 
-Look at some other Flutter Apps online and see how they use there README File.  Good examples are:
-
-- https://github.com/miickel/flutter_particle_clock
-- https://github.com/Tarikul711/flutter-food-delivery-app-ui    
-- https://github.com/mohak1283/Instagram-Clone
-
-
-## Include A Section That Tells Developers How To Install The App
+## How to Install
 
 Include a section that gives intructions on how to install the app or run it in Flutter.  What versions of the plugins are you assuming?  Maybe define a licence
 
