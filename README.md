@@ -10,10 +10,11 @@
 ![App Wireframes](/assets/images/CareCompanion_Wireframes.PNG "App Wireframes")
 
 ## The App
-
-![Onboarding]()
-![Home Screen]()
-![Chatbot Flow]()
+|   |Screens|
+|---|---|
+| **Onboarding** | ![Onboarding](/assets/images/Onboarding.png) |
+| **Chatbot Library & Profile Pages** | ![Home Screen](/assets/images/HomeScreen.png) |
+| **Chatbot Conversation UI** | ![Chatbot Flow](/assets/images/BeatrizChatbot.png)  |
 
 Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
 
