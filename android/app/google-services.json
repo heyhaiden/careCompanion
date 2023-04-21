@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "245224518875",
+    "project_id": "care-companion-app",
+    "storage_bucket": "care-companion-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245224518875:android:2588ae971fdb13585ec8fe",
+        "android_client_info": {
+          "package_name": "com.example.care_companion_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245224518875-7i5idailp75kqsccag3dflji9ctn3jdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8TitMwQY277DMxcZhHTUc3Rs1S7LLfA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245224518875-7i5idailp75kqsccag3dflji9ctn3jdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
