@@ -1,0 +1,4 @@
+care_companion_app/android/app/google-services.json
+care_companion_app/ios/firebase_app_id_file.json
+care_companion_app/macos/firebase_app_id_file.json
+care_companion_app/lib/firebase_options.dart
