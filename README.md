@@ -7,7 +7,7 @@
 
 ## The App
 
-![App](/assets/)
+![App Wireframes](/assets/images/CareCompanion_Wireframes.PNG)
 
 Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
 
