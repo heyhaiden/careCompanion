@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:care_companion_app/screens/beatriz_chatbot.dart';
 import 'package:care_companion_app/screens/clay_chatbot.dart';
 import 'package:care_companion_app/screens/dima_chatbot.dart';
 import 'package:care_companion_app/screens/alfred_chatbot.dart';
-
 import 'package:care_companion_app/widgets/settings_dialog.dart';
-import 'package:care_companion_app/widgets/user_info_form.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,14 +30,15 @@ class _HomePage extends State<HomePage> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(25, 30, 25, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(25, 30, 25, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(3, 3, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(3, 3, 0, 0),
                         child: Container(
                             width: MediaQuery.of(context).size.width * 0.25,
                             child: Image.asset(
@@ -48,7 +46,8 @@ class _HomePage extends State<HomePage> {
                             )),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                         child: Container(
                           child: IconButton(
                             icon: const Icon(Icons.settings_outlined),
@@ -58,7 +57,7 @@ class _HomePage extends State<HomePage> {
                               showDialog(
                                   context: context,
                                   builder: (BuildContext context) {
-                                    return SettingsDialog();
+                                    return const SettingsDialog();
                                   });
                               debugPrint('Settings tapped.');
                             },
@@ -72,12 +71,12 @@ class _HomePage extends State<HomePage> {
                   padding: EdgeInsetsDirectional.fromSTEB(30, 40, 25, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    children: [
+                    children: const [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                         child: Text(
-                          'Hello, [Name]!',
-                          style: const TextStyle(
+                          'Hello!',
+                          style: TextStyle(
                             color: Colors.white,
                             fontSize: 28,
                             wordSpacing: 2,
@@ -322,7 +321,7 @@ class _HomePage extends State<HomePage> {
                     ],
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(25, 32, 25, 0),
                 )
               ],

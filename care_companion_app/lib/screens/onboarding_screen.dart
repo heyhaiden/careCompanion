@@ -1,6 +1,6 @@
-import 'package:care_companion_app/screens/home_page.dart';
-import 'package:care_companion_app/src/authentication.dart';
 import 'package:flutter/material.dart';
+
+import 'package:care_companion_app/screens/home_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

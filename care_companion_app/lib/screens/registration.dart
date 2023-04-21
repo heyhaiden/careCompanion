@@ -1,10 +1,10 @@
-import 'package:care_companion_app/screens/home_page.dart';
-import 'package:care_companion_app/screens/onboarding_screen.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'package:care_companion_app/screens/onboarding_screen.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+  const RegisterPage({Key? key});
 
   @override
   _RegisterPageState createState() => _RegisterPageState();
@@ -92,7 +92,7 @@ class UserInfoForm extends StatelessWidget {
             const SizedBox(height: 20),
             TextFormField(
               controller: occupationC,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
               validator: (value) {
                 if (value!.isEmpty) {
                   return 'Please enter your occupation';
@@ -131,17 +131,19 @@ class UserInfoForm extends StatelessWidget {
                   FirebaseFirestore.instance.collection('users').add({
                     'name': nameC.text,
                     'occupation': occupationC.text,
-                  }).then((value) {
-                    nameC.clear();
-                    occupationC.clear();
-                    Navigator.push(
+                  }).then(
+                    (value) {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const OnboardingScreen()));
-                  });
-
-                  print(nameC.text);
-                  print(occupationC.text);
+                          builder: (context) => const OnboardingScreen(),
+                        ),
+                      ).then((_) {
+                        nameC.clear();
+                        occupationC.clear();
+                      });
+                    },
+                  );
                 }
               },
             ),

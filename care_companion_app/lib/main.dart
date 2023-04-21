@@ -2,7 +2,6 @@ import 'package:care_companion_app/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:care_companion_app/screens/onboarding_screen.dart';
 
 void main() async {
   // Initialize Firebase
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isFirstLaunch = (prefs.getBool('isFirstLaunch') ?? true);
     return isFirstLaunch;
-    print(isFirstLaunch);
   }
 
   @override

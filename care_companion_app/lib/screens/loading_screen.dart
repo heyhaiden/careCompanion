@@ -1,5 +1,4 @@
-import 'package:care_companion_app/screens/onboarding_screen.dart';
-import 'package:care_companion_app/src/authentication.dart';
+import 'package:care_companion_app/screens/registration.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -18,7 +17,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     super.initState();
 
     // Start a timer that sets _isLoading to false after three seconds
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       setState(() {
         _isLoading = false;
       });
