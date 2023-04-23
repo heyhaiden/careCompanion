@@ -24,9 +24,9 @@ Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?us
 
 ## How to Install
 
-1. Set up Flutter
-2. Set up Firebase CLI 
-3. Connect Kommunicate API
+1. Set up [Flutter](https://docs.flutter.dev/get-started/install?gclid=CjwKCAjwrpOiBhBVEiwA_473dEAxiLj1v1zfJi601lvxA4a9l5qxszzMT83qlJK_O_HbWxxZ_m51IxoC8rMQAvD_BwE&gclsrc=aw.ds)
+2. Set up [Firebase CLI](https://firebase.google.com/docs/flutter/setup?platform=ios)
+3. Connect [Kommunicate API](https://docs.kommunicate.io/docs/flutter-installation)
 - Build your own chatbot conversation flow
 
 ### Dependencies
