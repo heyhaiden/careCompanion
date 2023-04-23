@@ -12,7 +12,7 @@
 ## The App
 
 ### Built with
-![Kommunicate](/assets/images/xxx.png) ![Firebase](/assets/images/xxx.png)
+![Kommunicate](/assets/images/KommunicateLogo.png) ![Firebase](/assets/images/FirebaseLogo.png)
 
 |   |Screens|
 |---|---|
