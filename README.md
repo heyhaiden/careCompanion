@@ -10,6 +10,10 @@
 ![App Wireframes](/assets/images/CareCompanion_Wireframes.PNG "App Wireframes")
 
 ## The App
+
+### Built with
+![Kommunicate](/assets/images/xxx.png) ![Firebase](/assets/images/xxx.png)
+
 |   |Screens|
 |---|---|
 | **Onboarding** | ![Onboarding](/assets/images/Onboarding.png) |
