@@ -28,15 +28,12 @@ Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?us
 ### Dependencies
 | Name | Version | Description |
 |---|---|---|
-| Firebase | | |
-| firebase_core | ^2.9.0 | xxx|
-| firebase_auth | ^4.4.1 | xxx|
-| cloud_firestore | ^4.5.1 | xxx|
-| Kommunicate | | |
-| kommunicate_flutter | ^1.6.4 | xxx |
-| GUIs | | |
-| firebase_ui_auth | ^1.2.2 | xxx |
-| 
+| firebase_core | ^2.9.0 | A Flutter plugin to use the Firebase Core API, which enables connecting to multiple Firebase apps. |
+| firebase_auth | ^4.4.1 | Flutter plugin for Firebase Auth, enabling Android and iOS authentication using passwords, phone numbers and identity providers |
+| cloud_firestore | ^4.5.1 | Flutter plugin for Cloud Firestore, a cloud-hosted, noSQL database with live synchronization and offline support on Android |
+| firebase_ui_auth | ^1.2.2 | Firebase UI Auth is a set of Flutter widgets and utilities designed to help you build and integrate your user interface with Firebase Authentication. |
+| kommunicate_flutter | ^1.6.4 | Flutter wrapper using the native modules of Kommunicate Android SDK |
+| go_router | ^6.5.5 | A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens |
 
 ##  Contact Details
 
