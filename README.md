@@ -11,10 +11,9 @@
 
 ## The App
 
-### Built with
+### Built with:
 
-<img src="/assets/images/FirebaseLogo.png" width="250">
-<img src="/assets/images/KommunicateLogo.png" width= "250">
+<img src="/assets/images/FirebaseLogo.png" width="250"> <img src="/assets/images/KommunicateLogo.png" width= "250">
 
 |   |Screens|
 |---|---|
