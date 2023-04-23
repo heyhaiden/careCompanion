@@ -12,9 +12,9 @@
 ## The App
 
 ### Built with
-<p align = "center">
-  <img src="/assets/images/KommunicateLogo.png" width= "250"><img src="/assets/images/FirebaseLogo.png" width="250">
-  </p>
+
+<img src="/assets/images/FirebaseLogo.png" width="250">
+<img src="/assets/images/KommunicateLogo.png" width= "250">
 
 |   |Screens|
 |---|---|
