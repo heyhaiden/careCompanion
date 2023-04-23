@@ -20,12 +20,23 @@ Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?us
 
 ## How to Install
 
-Include a section that gives intructions on how to install the app or run it in Flutter.  What versions of the plugins are you assuming?  Maybe define a licence
+1. Set up Flutter
+2. Set up Firebase CLI 
+3. Connect Kommunicate API
+- Build your own chatbot conversation flow
 
-Table of Dependencies
-Firebase
-Kommunicate
-xxx
+### Dependencies
+| Name | Version | Description |
+|---|---|---|
+| Firebase | | |
+| firebase_core | ^2.9.0 | xxx|
+| firebase_auth | ^4.4.1 | xxx|
+| cloud_firestore | ^4.5.1 | xxx|
+| Kommunicate | | |
+| kommunicate_flutter | ^1.6.4 | xxx |
+| GUIs | | |
+| firebase_ui_auth | ^1.2.2 | xxx |
+| 
 
 ##  Contact Details
 
