@@ -18,9 +18,9 @@
 
 |   |Screens|
 |---|---|
-| **Onboarding** | ![Onboarding](/assets/images/Onboarding.png) |
-| **Chatbot Library & Profile Pages** | ![Home Screen](/assets/images/HomeScreen.png) |
-| **Chatbot Conversation UI** | ![Chatbot Flow](/assets/images/BeatrizChatbot.png)  |
+| **Onboarding** | <img src= "/assets/images/Onboarding.png" width="900"> |
+| **Chatbot Library & Profile Pages** | <img src= "/assets/images/HomeScreen.png" width="900"> |
+| **Chatbot Conversation UI** | <img src= "/assets/images/BeatrizChatbot.png" width="900">  |
 
 ### Video Preview 
 https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
