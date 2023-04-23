@@ -13,7 +13,7 @@
 
 ### Built with
 <p align = "center">
-  <img src="/assets/images/KommunicateLogo.png" height= "250"><img src="/assets/images/FirebaseLogo.png" height="250">
+  <img src="/assets/images/KommunicateLogo.png" width= "250"><img src="/assets/images/FirebaseLogo.png" width="250">
   </p>
 
 |   |Screens|
