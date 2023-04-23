@@ -12,7 +12,9 @@
 ## The App
 
 ### Built with
-![Kommunicate](/assets/images/KommunicateLogo.png) ![Firebase](/assets/images/FirebaseLogo.png)
+<p align = "center">
+  <img src="/assets/images/KommunicateLogo.png" height= "250"><img src="/assets/images/FirebaseLogo.png" height="250">
+  </p>
 
 |   |Screens|
 |---|---|
