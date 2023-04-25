@@ -1,4 +1,4 @@
-import 'package:care_companion_app/widgets/settings_dialog.dart';
+import 'package:CareCompanion/widgets/settings_dialog.dart';
 import 'package:flutter/material.dart';
 
 class ClayChat extends StatefulWidget {

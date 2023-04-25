@@ -1,4 +1,4 @@
-import 'package:care_companion_app/widgets/settings_dialog.dart';
+import 'package:CareCompanion/widgets/settings_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 

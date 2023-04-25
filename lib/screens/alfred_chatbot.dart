@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:care_companion_app/widgets/settings_dialog.dart';
+import 'package:CareCompanion/widgets/settings_dialog.dart';
 
 class AlfredChat extends StatefulWidget {
   const AlfredChat({super.key});

@@ -1,4 +1,4 @@
-import 'package:care_companion_app/screens/registration.dart';
+import 'package:CareCompanion/screens/registration.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
