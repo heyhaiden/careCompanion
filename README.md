@@ -10,22 +10,36 @@
 ![App Wireframes](/assets/images/CareCompanion_Wireframes.PNG "App Wireframes")
 
 ## The App
+
+### Built with:
+
+<img src="/assets/images/FirebaseLogo.png" width="250"> <img src="/assets/images/KommunicateLogo.png" width= "250">
+
 |   |Screens|
 |---|---|
-| **Onboarding** | ![Onboarding](/assets/images/Onboarding.png) |
-| **Chatbot Library & Profile Pages** | ![Home Screen](/assets/images/HomeScreen.png) |
-| **Chatbot Conversation UI** | ![Chatbot Flow](/assets/images/BeatrizChatbot.png)  |
+| **Onboarding** | <img src= "/assets/images/Onboarding.png" width="900"> |
+| **Chatbot Library & Profile Pages** | <img src= "/assets/images/HomeScreen.png" width="900"> |
+| **Chatbot Conversation UI** | <img src= "/assets/images/BeatrizChatbot.png" width="900">  |
 
-Video: https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
+### Video Preview 
+https://drive.google.com/file/d/13iQiQHFStGZBEYrBvnKB6y8pPyGC-od9/view?usp=share_link
 
 ## How to Install
 
-Include a section that gives intructions on how to install the app or run it in Flutter.  What versions of the plugins are you assuming?  Maybe define a licence
+1. Set up [Flutter](https://docs.flutter.dev/get-started/install?gclid=CjwKCAjwrpOiBhBVEiwA_473dEAxiLj1v1zfJi601lvxA4a9l5qxszzMT83qlJK_O_HbWxxZ_m51IxoC8rMQAvD_BwE&gclsrc=aw.ds)
+2. Set up [Firebase CLI](https://firebase.google.com/docs/flutter/setup?platform=ios)
+3. Connect [Kommunicate API](https://docs.kommunicate.io/docs/flutter-installation)
+- Build your own chatbot conversation flow
 
-Table of Dependencies
-Firebase
-Kommunicate
-xxx
+### Dependencies
+| Name | Version | Description |
+|---|---|---|
+| firebase_core | ^2.9.0 | A Flutter plugin to use the Firebase Core API, which enables connecting to multiple Firebase apps. |
+| firebase_auth | ^4.4.1 | Flutter plugin for Firebase Auth, enabling Android and iOS authentication using passwords, phone numbers and identity providers |
+| cloud_firestore | ^4.5.1 | Flutter plugin for Cloud Firestore, a cloud-hosted, noSQL database with live synchronization and offline support on Android |
+| firebase_ui_auth | ^1.2.2 | Firebase UI Auth is a set of Flutter widgets and utilities designed to help you build and integrate your user interface with Firebase Authentication. |
+| kommunicate_flutter | ^1.6.4 | Flutter wrapper using the native modules of Kommunicate Android SDK |
+| go_router | ^6.5.5 | A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens |
 
 ##  Contact Details
 
